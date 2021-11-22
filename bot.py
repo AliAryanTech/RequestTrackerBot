@@ -255,7 +255,7 @@ async def requestHandler(bot:Update, msg:Message):
                     [
                         InlineKeyboardButton(
                             "⏳Request Status⏳",
-                            url = url = f"https://t.me/AnimeListRequest/{requestMSG.message_id}"
+                            url = f"https://t.me/AnimeListRequest/{requestMSG.message_id}"
                         )
                     ]
                 ]
