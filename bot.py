@@ -61,15 +61,14 @@ requestRegex = "#[rR][eE][qQ][uU][eE][sS][tT] "
 async def startHandler(bot:Update, msg:Message):
     botInfo = await bot.get_me()
     await msg.reply_text(
-        "<b>Hi, I am Request Tracker Bot🤖.\
-        \nIf you hadn't added me in your Group & Channel then ➕add me now.\
+        "<b>Hello Sir, I am AL Request Bot🤖.\
+        \nI can track your Group Request & Send them to Request Channel with Action buttons 🎃.\
         \n\nHow to Use me?</b>\
-        \n\t1. Add me to your Group & CHannel.\
+        \n\t1. Just me to your Group & CHannel.\
         \n\t2. Make me admin in both Channel & Group.\
         \n\t3. Give permission to Post , Edit & Delete Messages.\
         \n\t4. Now send Group ID & Channel ID in this format <code>/add GroupID ChannelID</code>.\
-        \nNow Bot is ready to be used.\
-        \n\n<b>😊Join @AJPyroVerse & @AJPyroVerseGroup for getting more awesome 🤖bots like this.</b>",
+        \nNow Bot is ready to be used.",
         parse_mode = "html",
         reply_markup = InlineKeyboardMarkup(
             [
@@ -245,7 +244,7 @@ async def requestHandler(bot:Update, msg:Message):
             )
         )
 
-        replyText = f"<b>👋 Hello {mentionUser} !!\n\n📍 Your Request for {contentRequested} has been submitted to the admins.\n\n🚀 Your Request Will Be Uploaded In 48hours or less.\n📌 Please Note that Admins might be busy. So, this may take more time.\n\n👇 See Your Request Status Here 👇</b>"
+        replyText = f"<b>👋 Hello {mentionUser} !!\n\n Your Request for *( {contentRequested} )* has been submitted to the admins.🤤 \n\n Your Request Will Be Uploaded In 48hours or less.⏳ \n Please Note that Admins might be busy. So, this may take more time.💞 \n\n👇 See Your Request Status Here 👇</b>"
 
         await msg.reply_text(
             replyText,
@@ -256,7 +255,7 @@ async def requestHandler(bot:Update, msg:Message):
                     [
                         InlineKeyboardButton(
                             "⏳Request Status⏳",
-                            url = f"https://t.me/c/{channelIDPro}/{requestMSG.message_id}"
+                            url = url = f"https://t.me/AnimeListRequest/{requestMSG.message_id}"
                         )
                     ]
                 ]
@@ -277,12 +276,12 @@ async def callBackButton(bot:Update, callback_query:CallbackQuery):
         data = callback_query.data
         if data == "rejected":
             return await callback_query.answer(
-                "This request is rejected💔...\nAsk admins in group for more info💔",
+                "This request is rejected💔...\nAsk admins in @AnimeListChat Group for more info✨",
                 show_alert = True
             )
         elif data == "completed":
             return await callback_query.answer(
-                "This request Is Completed🥳...\nCheckout in Channel😊",
+                "This request Is Completed🥳...\nCheckout in @AnimeListUp Channel😊",
                 show_alert = True
             )
         if callback_query.from_user.id == channelOwnerID:
