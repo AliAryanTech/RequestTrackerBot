@@ -74,8 +74,8 @@ async def startHandler(bot:Update, msg:Message):
             [
                 [
                     InlineKeyboardButton(
-                        "➕Add me to your Group.",
-                        url = f"https://telegram.me/{botInfo.username}?startgroup=true"
+                        "Aɴιмє Grσυρ 🤤",
+                        url = f"https://t.me/AnimeListChat"
                     )
                 ]
             ]
