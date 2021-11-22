@@ -244,7 +244,7 @@ async def requestHandler(bot:Update, msg:Message):
             )
         )
 
-        replyText = f"<b>👋 Hello {mentionUser} !!\n\n Your Request for *( {contentRequested} )* has been submitted to the admins.🤤 \n\n Your Request Will Be Uploaded In 48hours or less.⏳ \n Please Note that Admins might be busy. So, this may take more time.💞 \n\n👇 See Your Request Status Here 👇</b>"
+        replyText = f"<b>👋 Hello {mentionUser} !!\n\n Your Request for ( {contentRequested} ) has been submitted to the admins.🤤 \n\n Your Request Will Be Uploaded In 48hours or less.⏳ \n Please Note that Admins might be busy. So, this may take more time.💞 \n\n👇 See Your Request Status Here 👇</b>"
 
         await msg.reply_text(
             replyText,
