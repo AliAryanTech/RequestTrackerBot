@@ -78,8 +78,8 @@ async def startHandler(bot:Update, msg:Message):
                         url = f"https://t.me/AnimeListChat"
                     )
                     InlineKeyboardButton(
-                            "Go Anime Channel 🎉",
-                            url = f" https://t.me/AnimeListUp"
+                        "Go Anime Channel 🎉",
+                        url = f" https://t.me/AnimeListUp"
                     )
                 ]
             ]
