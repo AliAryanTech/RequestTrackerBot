@@ -77,31 +77,15 @@ async def startHandler(bot:Update, msg:Message):
                         "Aɴιмє Grσυρ 🤤",
                         url = f"https://t.me/AnimeListChat"
                     )
+                    InlineKeyboardButton(
+                            "Go Anime Channel 🎉",
+                            url = f" https://t.me/AnimeListUp"
+                    )
                 ]
             ]
         )
     )
     return
-PM_START_TEXT = """
-*Hi There! {}, myself {}!* 
-I'm an Highly Advanced Bot With 100's Awesome Features.
-To Use My All Features Add Me In Your Group & Don't Forget To Promote Me As Admin.
-• *Uptime:* `{}`
-• `{}` *users, across* `{}` *chats.*
-"""
-
-HELP_STRINGS = """
-*{} ᴄᴏᴍᴇs ᴡɪᴛʜ:*
-*ᴀɪ ᴄʜᴀᴛʙᴏᴛ*, *ᴀɴɪᴍᴇ*, *ᴍᴜsɪᴄ*, *ɴᴏᴛᴇs*, *ғɪʟᴛᴇʀs*, *ɴsғᴡ* *ᴀɴᴅ ᴍᴏʀᴇ!*
-• *ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ᴇɪᴛʜᴇʀ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ* `/` *ᴏʀ* `!`[.](https://telegra.ph/file/466ea7a1cb2fcadaa7be0.jpg)
-• *ʀᴇᴀᴄʜ ᴏᴜᴛ ғᴏʀ sᴜᴘᴘᴏʀᴛ:* [sᴜᴘᴘᴏʀᴛ](https://t.me/makima_devil_support) 
-""".format(
-    dispatcher.bot.first_name, ""
-    if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
-
-MAKIMA_IMG = "https://telegra.ph/file/570598778da60177203b4.jpg"
-MAKIMASTART = "https://telegra.ph/file/ac997ad5f9e11cbe9512c.mp4"
-HELP_IMG = "https://telegra.ph/file/466ea7a1cb2fcadaa7be0.jpg"
 
 @app.on_message(filters.new_chat_members)
 async def chatHandler(bot:Update, msg:Message):
