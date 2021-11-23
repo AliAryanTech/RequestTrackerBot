@@ -72,11 +72,13 @@ async def startHandler(bot:Update, msg:Message):
         parse_mode = "html",
         reply_markup = InlineKeyboardMarkup(
             [
+                [
                     InlineKeyboardButton(
                         "Aɴιмє Grσυρ 🤤",
                         url = f"https://t.me/AnimeListChat"
                     )
                 ]
+            ]
         )
     )
     return
